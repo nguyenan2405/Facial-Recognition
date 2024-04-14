@@ -1,4 +1,3 @@
-import os
 import pickle
 import cv2
 import face_recognition
@@ -20,10 +19,6 @@ bucket = storage.bucket()
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
-
-folderModePath = 'Resources/Modes'
-modePathList = os.listdir(folderModePath)
-imgModeList = [cv2.imread(os.path.join(folderModePath, path)) for path in modePathList]
 
 print("Loading Encode File ...")
 with open('EncodeFile.p', 'rb') as file:
